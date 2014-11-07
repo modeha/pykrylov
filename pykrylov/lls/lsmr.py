@@ -491,6 +491,12 @@ class LSMRFramework(KrylovMethod):
             print 'Estimated energy norm of x: %7.1e' % sqrt(xNrgNorm2)
 
         self.x = x
+        self.A = A
+        self.x = x ; 
+        self.var = var
+        self.itn =itn; self.istop = istop
+        self.Anorm = Anorm; self.Acond = Acond ; self.Arnorm = Arnorm
+        self.xnorm = xnorm;   self.r1norm = r1norm ; self.r2norm = r2norm
         return x, istop, itn, normr, normar, normA, condA, normx
 
 
